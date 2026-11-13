@@ -1795,7 +1795,7 @@ export function _stringbool(
   const params = util.normalizeParams(_params);
 
   let truthyArray = params.truthy ?? ["true", "1", "yes", "on", "y", "enabled"];
-  let falsyArray = params.falsy ?? ["false", "0", "no", "off", "n", "disabled"];
+  let falsyArray = params.falsy ?? ["false", "0", "no", "off", "n", "disabled", ""];
   if (params.case !== "sensitive") {
     truthyArray = truthyArray.map((v) => (typeof v === "string" ? v.toLowerCase() : v));
     falsyArray = falsyArray.map((v) => (typeof v === "string" ? v.toLowerCase() : v));
